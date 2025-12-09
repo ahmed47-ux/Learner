@@ -1,0 +1,46 @@
+
+/* Simple responsive styles, RTL */
+:root{
+  --bg:#ffffff; --text:#111827; --muted:#6b7280; --accent: #0b84ff;
+  --chat-blue: #cfeaff;
+}
+body{font-family:system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial; background:var(--bg); color:var(--text); margin:0; padding:0; direction:rtl;}
+.light{--bg:#f8fafc; --text:#0f172a}
+.dark{--bg:#0b1220; --text:#e6eef8; --muted:#9aa9bf}
+
+.site-header{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;border-bottom:1px solid rgba(0,0,0,0.06);background:linear-gradient(90deg,transparent,rgba(255,255,255,0.02));}
+.site-header h1{margin:0;font-size:18px}
+.site-header nav button{margin-left:8px;padding:8px 12px;border-radius:8px;border:0;background:#eef2ff;cursor:pointer}
+
+.container{max-width:1100px;margin:20px auto;padding:0 12px}
+.hero{background:linear-gradient(180deg, rgba(11,132,255,0.06), transparent); padding:18px;border-radius:14px}
+.lang-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:14px;margin-top:12px}
+.lang-card{background:white;border-radius:12px;padding:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06);cursor:pointer;display:flex;flex-direction:column;gap:8px;min-height:120px}
+.lang-card img{width:100%;height:80px;object-fit:cover;border-radius:8px}
+.lang-card h4{margin:0;font-size:16px}
+.features{margin-top:18px;padding:12px;background:rgba(0,0,0,0.02);border-radius:10px}
+.container .cta{margin-top:18px;text-align:center}
+
+footer{padding:18px;text-align:center;color:var(--muted);font-size:14px;margin-top:26px}
+
+/* Pinterest style pages */
+.grid-page{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;padding:12px}
+.card{background:linear-gradient(180deg, #fff, #fbfdff);padding:12px;border-radius:12px;box-shadow:0 8px 20px rgba(2,6,23,0.06)}
+
+/* Chat UI */
+.chat-window{display:flex;flex-direction:column;height:60vh;border-radius:12px;overflow:hidden;border:1px solid rgba(0,0,0,0.06)}
+.chat-logs{flex:1;padding:12px;overflow:auto;background:linear-gradient(180deg, #ffffff, #f4f9ff)}
+.chat-input{display:flex;padding:8px;border-top:1px solid rgba(0,0,0,0.06)}
+.chat-input input{flex:1;padding:8px;border-radius:8px;border:1px solid #e2e8f0;margin-left:8px}
+
+/* Subscribed chat theme */
+.subscribed .chat-logs{background:var(--chat-blue)}
+.subscribed .chat-window {border-color: rgba(11,132,255,0.35)}
+
+/* Animated avatar for AI conversation */
+.ai-avatar{width:120px;height:120px;border-radius:12px;overflow:hidden;background:#111;color:white;display:flex;align-items:center;justify-content:center;font-weight:700}
+.ai-speaking{animation:aiSpeak 900ms infinite ease-in-out}
+@keyframes aiSpeak{0%{transform:scale(1)}50%{transform:scale(1.05)}100%{transform:scale(1)}}
+
+/* small */
+@media (max-width:600px){.site-header nav{display:none} .lang-grid{grid-template-columns:1fr 1fr}}
