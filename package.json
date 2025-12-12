@@ -1,4 +1,3 @@
-
 {
   "name": "lingobox-next",
   "version": "0.1.0",
@@ -18,7 +17,7 @@
   },
   "devDependencies": {
     "tailwindcss": "3.4.1",
-    "autoprefixer": "^10.4.14"
+    "autoprefixer": "^10.4.14",
     "postcss": "8.4.23"
   }
 }
